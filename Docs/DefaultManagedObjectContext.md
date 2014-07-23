@@ -15,7 +15,7 @@ This context will be used throughout MagicalRecord in any method that uses a con
 If you need to create a new managed object context for use in non-main threads, use the following method:
 
 ```objective-c
-NSManagedObjectContext *myNewContext = [NSManagedObjectContext MR_newContext];
+NSManagedObjectContext *myNewContext = [NSManagedObjectContext MR_context];
 ```
 	
 This will create a new managed object context which has the same object model and persistent store as the default context, but is safe for use on another thread. It automatically sets the default context as it's parent context.
